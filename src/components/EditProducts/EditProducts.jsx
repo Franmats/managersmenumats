@@ -28,7 +28,7 @@ export const EditProducts= ()=> {
         const fetchData = async () => {
           try {
             const token = await tokenStractor()
-            const response = await fetch(`http://127.0.0.1:8080/api/products/user/products/getforuser `, {
+            const response = await fetch(`https://matsapps.com/api/products/user/products/getforuser `, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export const EditProducts= ()=> {
 
         try {
             const token = await tokenStractor()
-            const change = await fetch(`http://127.0.0.1:8080/api/products/${id}/${status} `, {
+            const change = await fetch(`https://matsapps.com/api/products/${id}/${status} `, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',

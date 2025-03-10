@@ -17,12 +17,12 @@ export const SessionLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://127.0.0.1:8080/api/user/login', {
+      const response = await fetch('https://matsapps.com/api/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
+
         body: JSON.stringify(formData),
       });
       
@@ -63,7 +63,7 @@ export const SessionLogin = () => {
                         onChange={handleChange}
                         required
                         className="login__input" 
-                        placeholder="User name / Email"/>
+                        placeholder="Email"/>
 				</div>
 				<div className="login__field">
 					<i className="login__icon fas fa-lock"></i>
@@ -75,10 +75,10 @@ export const SessionLogin = () => {
                     value={formData.password}
                     onChange={handleChange}
                     required 
-                    placeholder="Password"/>
+                    placeholder="Contraseña"/>
 				</div>
 				<button type='submit' className="button login__submit">
-					<span className="button__text">Log In Now</span>
+					<span className="button__text">INICIAR SESION</span>
 					<i className="button__icon fas fa-chevron-right"></i>
 				</button>				
 			</form>
@@ -88,7 +88,6 @@ export const SessionLogin = () => {
             </div>
           )}
 			<div className="social-login">
-				<h3>log in via</h3>
 				<div className="social-icons">
 					<a href="#" className="social-login__icon fab fa-instagram"></a>
 					<a href="#" className="social-login__icon fab fa-facebook"></a>

@@ -39,7 +39,7 @@ export const EditCategorieView= ()=> {
       
           try {
             const token = await tokenStractor()
-            const response = await fetch(`http://127.0.0.1:8080/api/categories/byid/${id} `, {
+            const response = await fetch(`https://matsapps.com/api/categories/byid/${id} `, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
